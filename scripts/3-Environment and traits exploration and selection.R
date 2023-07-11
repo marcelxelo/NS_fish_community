@@ -231,14 +231,14 @@ par(mfrow=c(1,1),mar=c(4,4,0.2,2))
 Trait_collection <- read.table("Data Sources/Fish traits/TraitCollectionFishNAtlanticNEPacificContShelf.txt", 
                                header=TRUE, sep = "\t", dec=",", fill= TRUE, na.strings=c("","NA"))
 
-Arn_trait <- read.table("Data sources/Fish traits/NS_traits_Arnaud_working.txt", header=TRUE, sep = "\t", dec=",", fill= TRUE)
-Arn_trait$Species <-  gsub("_", " ", Arn_trait$species)
-Arn_trait$species <- NULL
+a_trait <- read.table("Data sources/Fish traits/NS_traits_working.txt", header=TRUE, sep = "\t", dec=",", fill= TRUE)
+a_trait$Species <-  gsub("_", " ", a_trait$species)
+a_trait$species <- NULL
 #Add Burrow's temperature as another trait
 Burrow <- read.csv("Data sources/Fish traits/Burrows_Species range temperature.csv")
 Burrow$X <- NULL
-Arn_trait <- merge(Arn_trait, Burrow[, c("speciesName","en4sbtwannp50")], by.x="Species", by.y="speciesName", all.x=TRUE, all.y = FALSE)
-rownames(Arn_trait) <- NULL
+a_trait <- merge(a_trait, Burrow[, c("speciesName","en4sbtwannp50")], by.x="Species", by.y="speciesName", all.x=TRUE, all.y = FALSE)
+rownames(a_trait) <- NULL
 
 sort(names(Trait_collection))
 # Select traits of interest:
@@ -253,7 +253,7 @@ myTraits <- merge(Trait_collection[,c("taxon",
                                       "offspring.size", "fecundity", "spawning.type",  # Reproductive
                                       "feeding.mode", # Dietary
                                       "growth.coefficient")],
-                  Arn_trait[,c("Species",
+                  a_trait[,c("Species",
                                "trophic_level", # Dietary, Life history
                                "en4sbtwannp50")], # Temperature
                   by.x = "taxon", by.y = "Species",
