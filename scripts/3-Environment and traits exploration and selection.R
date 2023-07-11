@@ -232,13 +232,15 @@ Trait_collection <- read.table("Data Sources/Fish traits/TraitCollectionFishNAtl
                                header=TRUE, sep = "\t", dec=",", fill= TRUE, na.strings=c("","NA"))
 
 a_trait <- read.table("Data sources/Fish traits/NS_traits_working.txt", header=TRUE, sep = "\t", dec=",", fill= TRUE)
+# a_trait <- a_trait%>%select(species, trophic_level)
+# write.table(a_trait, file = "Data sources/Fish traits/NS_traits_working.txt", sep = "\t", dec=",")
 a_trait$Species <-  gsub("_", " ", a_trait$species)
 a_trait$species <- NULL
 #Add Burrow's temperature as another trait
-Burrow <- read.csv("Data sources/Fish traits/Burrows_Species range temperature.csv")
-Burrow$X <- NULL
-a_trait <- merge(a_trait, Burrow[, c("speciesName","en4sbtwannp50")], by.x="Species", by.y="speciesName", all.x=TRUE, all.y = FALSE)
-rownames(a_trait) <- NULL
+# Burrow <- read.csv("Data sources/Fish traits/Burrows_Species range temperature.csv")
+# Burrow$X <- NULL
+# a_trait <- merge(a_trait, Burrow[, c("speciesName","en4sbtwannp50")], by.x="Species", by.y="speciesName", all.x=TRUE, all.y = FALSE)
+# rownames(a_trait) <- NULL
 
 sort(names(Trait_collection))
 # Select traits of interest:
@@ -254,8 +256,8 @@ myTraits <- merge(Trait_collection[,c("taxon",
                                       "feeding.mode", # Dietary
                                       "growth.coefficient")],
                   a_trait[,c("Species",
-                               "trophic_level", # Dietary, Life history
-                               "en4sbtwannp50")], # Temperature
+                               "trophic_level" # Dietary, Life history "en4sbtwannp50")], # Temperature
+                  )],
                   by.x = "taxon", by.y = "Species",
                   all = TRUE)
 
@@ -280,7 +282,7 @@ myTraits <- myTraits%>%group_by(Species, body.shape, fin.shape, spawning.type, f
             fecundity = mean(fecundity, na.rm=T),
             growth.coefficient = mean(growth.coefficient, na.rm = T),
             trophic_level = mean(trophic_level, na.rm=T),
-            en4sbtwannp50 = mean(en4sbtwannp50, na.rm=T),
+            # en4sbtwannp50 = mean(en4sbtwannp50, na.rm=T),
             log_age.maturity = log(mean(age.maturity, na.rm=T)),
             log_length.max = log(mean(length.max, na.rm=T)),
             log_offspring.size = log(mean(offspring.size, na.rm=T)),
