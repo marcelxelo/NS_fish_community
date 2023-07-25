@@ -6,7 +6,7 @@ Main contact: Marcel Montanyès Solé [mamont@dtu.dk](mailto:mamont@dtu.dk)
 
 
 ## Scripts
-* [Download and clean survery data from DATRAS](https://github.com/marcelxelo/NS_fish_community/blob/main/scripts/1-Download%20and%20clean%20survery%20data%20from%20DATRAS.R), modified from [CleanTrawlNAmEUr](https://github.com/AquaAuma/CleanTrawlNAmEUr/blob/main/code/cleanDATRAS.R)
+* [1-](https://github.com/marcelxelo/NS_fish_community/blob/main/scripts/1-Download%20and%20clean%20survery%20data%20from%20DATRAS.R) Download and clean survery data from DATRAS, modified from [CleanTrawlNAmEUr](https://github.com/AquaAuma/CleanTrawlNAmEUr/blob/main/code/cleanDATRAS.R)
 * [Workflow data preparation](https://github.com/marcelxelo/NS_fish_community/blob/main/scripts/2-Workflow%20data%20preparation.R): Retrieve environmental covariates from NEMO-MEDUSA, sediment type from EMODnet and fishing effort associated to each haul, and reformat data.
 * [Environment and traits exploration and selection](https://github.com/marcelxelo/NS_fish_community/blob/main/scripts/3-Environment%20and%20traits%20exploration%20and%20selection.R)
 * [Prepare data input for HPC run](https://github.com/marcelxelo/NS_fish_community/blob/main/scripts/4-Prepare%20data%20input%20for%20HPC%20run.R): Prepare all the inputs for fitting the HMSC model, i.e, environmental data (X), community data (Y), trait data (T), taxonomy (C).
