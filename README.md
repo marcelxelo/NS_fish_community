@@ -1,4 +1,4 @@
-# North Sea HMSC fish occurrence model
+# North Sea fish community HMSC model
 
 This repository contains the scripts used in the manuscript [**Community assembly processes and drivers shaping marine fish community structure in the North Sea**](https://doi.org/10.1111/ecog.06642) by Marcel Montanyès, Benjamin Weigel, and Martin Lindegren.
 
