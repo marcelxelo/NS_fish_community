@@ -5,7 +5,7 @@ This repository contains the scripts used in the manuscript [**Community assembl
 Main contact: Marcel Montanyès Solé [mamont@dtu.dk](mailto:mamont@dtu.dk)
 
 
-## Scripts
+## [Scripts](https://github.com/marcelxelo/NS_fish_community/tree/main/scripts)
 * [Step 1](https://github.com/marcelxelo/NS_fish_community/blob/main/scripts/1-Download%20and%20clean%20survery%20data%20from%20DATRAS.R) - Download and clean survery data from DATRAS, modified from [CleanTrawlNAmEUr](https://github.com/AquaAuma/CleanTrawlNAmEUr/blob/main/code/cleanDATRAS.R)
 * [Step 2](https://github.com/marcelxelo/NS_fish_community/blob/main/scripts/2-Workflow%20data%20preparation.R) - Retrieve environmental covariates from NEMO-MEDUSA, sediment type from EMODnet and fishing effort associated to each haul, and reformat data
 * [Step 3](https://github.com/marcelxelo/NS_fish_community/blob/main/scripts/3-Environment%20and%20traits%20exploration%20and%20selection.R) - Exploration and selection of environmental covariates and species traits
