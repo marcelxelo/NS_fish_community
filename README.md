@@ -5,7 +5,7 @@ This repository contains the scripts used in the manuscript [Community assembly 
 Main contact: Marcel Montanyès Solé [mamont@dtu.dk](mailto:mamont@dtu.dk)
 
 
-## Data
+## Data sources
 * The North Sea International Bottom Trawl Survey data are available from the [DATRAS](https://datras.ices.dk/Data_products/Download/Download_Data_public.aspx)
 * Trait data were collected from available [Beukhof et al. 2019](https://doi.org/10.1594/PANGAEA.900866) trait data base, supplemented with information from recent literature [Coulon et al., 2023](https://doi.org/10.1111/geb.13731)
 * Fishing effort data were collected from [Couce et al., 2019](https://doi.org/10.14466/)
