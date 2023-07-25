@@ -149,8 +149,7 @@ myViolin
 dev.off()
 
 # Figure 3. Beta plot -----------------------------------------------------
-# Modified code code for plotting Beta and gamma parameters from Maioli et al., 2023
-
+# Modified code for plotting Beta and Gamma parameters based on the work of Maioli et al., 2023
 
 postBeta <-  getPostEstimate(models$fullPa, parName = "Beta")
 supportLevel <- 0.95
@@ -342,7 +341,7 @@ plotBeta(models$fullPa, postBeta, main = paste0("Beta\n", "support level ", supp
 
 
 # Figure 4. Gamma plot -----------------------------------------------------
-# Modified code code for plotting Beta and gamma parameters from Maioli et al., 2023
+# Modified code for plotting Beta and Gamma parameters based on the work of Maioli et al., 2023
 
 postGamma <-  getPostEstimate(models$fullPa, parName = "Gamma")
 supportLevel <- 0.95
