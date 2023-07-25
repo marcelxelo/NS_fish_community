@@ -96,6 +96,7 @@ group <- c(1,1,1,1,
            5) # Assign each variable to a group)
 # The intercept can be assigned to either group as it doesn't make any difference
 VPfull <- computeVariancePartitioning(models$fullPa, group = group, groupnames = groupnames)
+# VPfull <- thinComputeVariancePartitioning(models$fullPa, group = group, groupnames = groupnames, thin = 10)
 VPfull <- data.frame(t(VPfull$vals))
 head(VPfull)
 VPfull$Species <- rownames(VPfull)
@@ -148,6 +149,9 @@ myViolin
 dev.off()
 
 # Figure 3. Beta plot -----------------------------------------------------
+# Modified code code for plotting Beta and gamma parameters from Maioli et al., 2023
+
+
 postBeta <-  getPostEstimate(models$fullPa, parName = "Beta")
 supportLevel <- 0.95
 
@@ -338,6 +342,8 @@ plotBeta(models$fullPa, postBeta, main = paste0("Beta\n", "support level ", supp
 
 
 # Figure 4. Gamma plot -----------------------------------------------------
+# Modified code code for plotting Beta and gamma parameters from Maioli et al., 2023
+
 postGamma <-  getPostEstimate(models$fullPa, parName = "Gamma")
 supportLevel <- 0.95
 
